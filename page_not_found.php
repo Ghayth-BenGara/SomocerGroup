@@ -48,10 +48,9 @@
             <div class = "col-md-10 p0">
                 <div class = "collapse navbar-collapse" id = "min_navbar">
                     <ul class = "nav navbar-nav navbar-right">
-                      <li><a href = "index.php">Accueil</a></li>
-                      <li><a href = "societe.php">Société</a></li>
-                      <li><a href = "login.php">Login</a></li>
-                      <li><a href = "contact.php">Contact</a></li>
+                    <?php
+                        require_once 'php/autre/menu_site.php';
+                     ?>
                     </ul>
                 </div>
             </div>
