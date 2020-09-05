@@ -1,7 +1,7 @@
 <?php
   session_start();
   if ((!isset($_SESSION['commerciaux'])) || (empty($_SESSION['commerciaux']))){
-    header('Location: ../page_not_found.html');
+    header('Location: ../page_not_found.php');
     return false;
   }
   require_once 'autre/connexion_db.php';

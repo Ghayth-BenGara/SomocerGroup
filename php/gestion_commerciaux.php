@@ -1,7 +1,7 @@
 <?php
   session_start();
   if ((!isset($_SESSION['admin'])) || (empty($_SESSION['admin']))){
-    header('Location: ../page_not_found.html');
+    header('Location: ../page_not_found.php');
     return false;
   }
   ?>

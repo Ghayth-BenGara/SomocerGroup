@@ -42,16 +42,16 @@
                  <span class = "icon-bar"></span>
                  <span class = "icon-bar"></span>
                 </button>
-                <a class = "navbar-brand" href = "index.html"><img src = "images/logo.png" alt = ""></a>
+                <a class = "navbar-brand" href = "index.php"><img src = "images/logo.png" alt = ""></a>
               </div>
             </div>
             <div class = "col-md-10 p0">
                 <div class = "collapse navbar-collapse" id = "min_navbar">
                     <ul class = "nav navbar-nav navbar-right">
-                      <li><a href = "index.html">Accueil</a></li>
-                      <li><a href = "societe.html">Société</a></li>
-                      <li><a href = "login.html">Login</a></li>
-                      <li><a href = "contact.html">Contact</a></li>
+                      <li><a href = "index.php">Accueil</a></li>
+                      <li><a href = "societe.php">Société</a></li>
+                      <li><a href = "login.php">Login</a></li>
+                      <li><a href = "contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,8 +60,8 @@
         <section class = "banner_area" data-stellar-background-ratio = "0.5">
           <h2>Page non trouvé</h2>
           <ol class = "breadcrumb">
-            <li><a href = "index.html">Accueil</a></li>
-            <li><a href = "page_not_found.html" class = "active">Page non trouvé</a></li>
+            <li><a href = "index.php">Accueil</a></li>
+            <li><a href = "page_not_found.php" class = "active">Page non trouvé</a></li>
           </ol>
         </section>
         <section class = "not_found_area">

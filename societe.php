@@ -43,16 +43,16 @@
                     <span class = "icon-bar"></span>
                     <span class = "icon-bar"></span>
                    </button>
-                   <a class = "navbar-brand" href = "index.html"><img src = "images/logo.png" alt = ""></a>
+                   <a class = "navbar-brand" href = "index.php"><img src = "images/logo.png" alt = ""></a>
                  </div>
                </div>
                <div class = "col-md-10 p0">
                 <div class = "collapse navbar-collapse" id = "min_navbar">
                     <ul class = "nav navbar-nav navbar-right">
-                      <li><a href = "index.html">Accueil</a></li>
-                      <li><a href = "societe.html">Société</a></li>
-                      <li><a href = "login.html">Login</a></li>
-                      <li><a href = "contact.html">Contact</a></li>
+                      <li><a href = "index.php">Accueil</a></li>
+                      <li><a href = "societe.php">Société</a></li>
+                      <li><a href = "login.php">Login</a></li>
+                      <li><a href = "contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,8 +61,8 @@
         <section class = "banner_area" data-stellar-background-ratio = "0.5">
         <h2>Société</h2>
         <ol class = "breadcrumb">
-            <li><a href = "index.html">Accueil</a></li>
-            <li><a href = "societe.html" class = "active">Société</a></li>
+            <li><a href = "index.php">Accueil</a></li>
+            <li><a href = "societe.php" class = "active">Société</a></li>
         </ol>
     </section>
     <section class = "building_construction_area">
@@ -90,7 +90,7 @@
                         <a href = "#" class = "contac_namber">73 410 469</a>
                         <a href = "#" class = "contac_namber">73 410 043</a>
                         <p>Ou envoyer nous un message içi :</p>
-                        <a href = "contact.html" class = "button_all">Contact</a>
+                        <a href = "contact.php" class = "button_all">Contact</a>
                     </div>
                 </div>
             </div>

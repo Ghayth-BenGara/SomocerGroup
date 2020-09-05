@@ -6,7 +6,7 @@
         <meta name =  "author" contet = "Chaima Ben Mbarek">
         <meta http-equiv = "refresh" content = "600">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-        <title>Creer un compte | Somocer Group</title>
+        <title>Login | Somocer Group</title>
         <link href = "images/favicon.png" rel = "icon"  type = "image/x-icon" />
         <link href = "css/bootstrap.min.css" rel = "stylesheet">
         <link href = "images/favicon.png" rel = "icon"  type = "image/x-icon" />
@@ -51,16 +51,16 @@
                         <span class = "icon-bar"></span>
                         <span class = "icon-bar"></span>
                        </button>
-                       <a class = "navbar-brand" href = "index.html"><img src = "images/logo.png" alt = ""></a>
+                       <a class = "navbar-brand" href = "index.php"><img src = "images/logo.png" alt = ""></a>
                      </div>
                    </div>
                    <div class = "col-md-10 p0">
                        <div class = "collapse navbar-collapse" id = "min_navbar">
                            <ul class = "nav navbar-nav navbar-right">
-                             <li><a href = "index.html">Accueil</a></li>
-                             <li><a href = "societe.html">Société</a></li>
-                             <li><a href = "login.html">Login</a></li>
-                             <li><a href = "contact.html">Contact</a></li>
+                             <li><a href = "index.php">Accueil</a></li>
+                             <li><a href = "societe.php">Société</a></li>
+                             <li><a href = "login.php">Login</a></li>
+                             <li><a href = "contact.php">Contact</a></li>
                            </ul>
                        </div>
                    </div>
@@ -73,9 +73,9 @@
                   <div class = "login100-pic js-tilt" data-tilt>
                     <img src = "images/logo.png" alt = "Somocer Group">
                   </div>
-                  <form class = "login100-form" name = "form" id = "form" method = "POST" action = "#" onsubmit = "return verificationFormCreation();">
+                  <form class = "login100-form" name = "form" id = "form" method = "POST" action = "#" onsubmit = "return verificationForm();">
                     <span class = "login100-form-title">
-                      Créer un compte
+                      Login
                     </span>
                     <div class = "wrap-input100">
                       <input class = "input100" type = "email" name = "email" id = "email" placeholder = "Email *" required>
@@ -90,34 +90,24 @@
                       <span class = "symbol-input100">
                         <i class = "fa fa-id-card" aria-hidden = "true"></i>
                       </span>
-                      <span toggle = "#matricule" class = "fa fa-eye field-icon toggle-password" ></span>
+                      <span toggle = "#matricule" class = "fa fa-fw fa-eye field-icon toggle-password" ></span>
                     </div>
-                    <div class = "wrap-input100">
-                        <input class = "input100" type = "text" name = "nom" id = "nom" placeholder = "Nom *" required>
-                        <span class = "focus-input100"></span>
-                        <span class = "symbol-input100">
-                          <i class = "fa fa-user" aria-hidden = "true"></i>
-                        </span>
-                    </div>
-                    <div class = "wrap-input100">
-                        <input class = "input100" type = "text" name = "prenom" id = "prenom" placeholder = "Prénom *" required>
-                        <span class = "focus-input100"></span>
-                        <span class = "symbol-input100">
-                          <i class = "fa fa-user" aria-hidden = "true"></i>
-                        </span>
-                      </div>
-                      <div class = "wrap-input100">
-                        <input class = "input100" type = "text" name = "adresse" id = "adresse" placeholder = "Adresse *" required>
-                        <span class = "focus-input100"></span>
-                        <span class = "symbol-input100">
-                          <i class = "fa fa-home" aria-hidden = "true"></i>
-                        </span>
-                      </div>
                     
                     <div class = "container-login100-form-btn">
                       <button class = "login100-form-btn">
-                        Creer un compte
+                        Se connecter
                       </button>
+                    </div>
+                    <div class = "text-center p-t-80">
+                      <a class = "txt2" href = "#" onclick = "ouvrirLogin()">
+                        Connexion pour les commerciaux
+                        <i class = "fa fa-long-arrow-right m-l-5" aria-hidden = "true"></i>
+                      </a>
+                      <br>
+                      <br>
+                      <a class = "txt2" href = "creer_compte_admin.php">
+                        Créer un compte ADMIN
+                      </a>
                     </div>
                   </form>
                 </div>
@@ -164,6 +154,56 @@
                   &copy; Tous les droits sont réservés 2020 <a href = "https://www.somocergroup.com/">SOMOCER GROUP</a>
                 </div>
               </footer>
+              <script>
+                function ouvrirLogin(){
+              swal({
+              type: 'info',
+              html:
+              '<div class = "limiter">'+
+              '<div class = "container-login100">'+
+                '<div class = "wrap-login100">'+
+                  '<form class = "login100-form" name = "form" id = "form_login_c" method = "POST" action = "#" onsubmit = "return verificationFormLogin();">'+
+                    '<span class = "login100-form-title">'+
+                      'Login'+
+                    '</span>'+
+                    '<div class = "wrap-input100">'+
+                      '<input class = "input100" type = "email" name = "email" id = "email_com" placeholder = "Email *" required>'+
+                      '<span class = "focus-input100"></span>'+
+                      '<span class = "symbol-input100">'+
+                        '<i class = "fa fa-envelope-o" aria-hidden = "true"></i>'+
+                      '</span>'+
+                    '</div>'+
+                    '<div class = "wrap-input100">'+
+                      '<input class = "input100" type = "password" name = "matricule" id = "matricule_com" placeholder = "Matricule *" maxlength = "4" required>'+
+                      '<span class = "focus-input100"></span>'+
+                      '<span class = "symbol-input100">'+
+                        '<i class = "fa fa-id-card" aria-hidden = "true"></i>'+
+                      '</span>'+
+                    '</div>'+
+                    '<div class = "container-login100-form-btn">'+
+                      '<button class = "login100-form-btn">'+
+                        'Se connecter'+
+                      '</button>'+
+                    '</div>'+
+                  '</form>'+
+                '</div>'+
+              '</div>'+
+            '</div>',
+              width: 600,
+              padding: '1em',
+              showCloseButton: true,
+              showCancelButton: false,
+              focusCancel: false,
+              popup: 'animated fadeInDown faster',
+              showConfirmButton: false,
+              allowEscapeKey: false,
+              allowEnterKey:false,
+              scrollbarPadding: true,
+              allowOutsideClick:false
+            })
+            }
+
+              </script>
                 <script src = "js/jquery-1.12.0.min.js"></script>
                 <script src = "js/bootstrap.min.js"></script>
                 <script src = "vendors/animate/wow.min.js"></script>
