@@ -85,9 +85,9 @@
             <div class = "col-md-10 p0">
                        <div class = "collapse navbar-collapse" id = "min_navbar">
                            <ul class = "nav navbar-nav navbar-right">
-                             <li><a href = "consult_client.php">Consultation des clients</a></li>
-                             <li><a href = "gestion_commande.php">Gestion des commandes</a></li>
-                             <li><a href = "#" onclick = "logoutUtilisateur();">Déconnexion</a></li>
+                           <?php
+                              require_once 'autre/menu_commerciaux.php';
+                             ?>
                            </ul>
                        </div>
                    </div>

@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  if ((isset($_SESSION['admin'])) || (!empty($_SESSION['admin']))){
+    header('Location:php/page_not_found_admin.php');
+    return false;
+  }
+  else if ((isset($_SESSION['commerciaux'])) || (!empty($_SESSION['commerciaux']))){
+    header('Location:php/page_not_found_commerciaux.php');
+    return false;
+  }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

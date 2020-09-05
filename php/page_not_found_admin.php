@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  if ((!isset($_SESSION['commerciaux'])) || (empty($_SESSION['commerciaux']))){
-    header('Location:../page_not_found.php');
-    return false;
-  }
-  ?>
 <!DOCTYPE html>
   <html lang = "en">
   <head>
@@ -13,7 +6,7 @@
     <meta name =  "author" contet = "Chaima Ben Mbarek">
     <meta http-equiv = "refresh" content = "600">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>Consultation des clients | Somocer Group</title>
+    <title>404 Page non trouvé | Somocer Group</title>
     <link href = "../images/favicon.png" rel = "icon"  type = "image/x-icon" />
     <link href = "../css/bootstrap.min.css" rel = "stylesheet">
     <link href = "../vendors/animate/animate.css" rel = "stylesheet">
@@ -21,16 +14,9 @@
     <link href = "../vendors/camera-slider/camera.css"rel = "stylesheet" >
     <link href = "../vendors/owl_carousel/owl.carousel.css" rel = "stylesheet" type = "text/css"  media = "all">
     <link href = "../css/style.css" rel = "stylesheet" type = "text/css"  media = "all" />
-    <link href = "../login/vendor/animate/animate.css" rel = "stylesheet" type = "text/css" >
-	  <link href = "../login/vendor/css-hamburgers/hamburgers.min.css" rel = "stylesheet" type = "text/css" >
-	  <link href = "../login/vendor/select2/select2.min.css" rel = "stylesheet" type = "text/css">
-	  <link href = "../login/css/util.css" rel = "stylesheet" type = "text/css" >
-    <link href = "../login/css/main.css" rel = "stylesheet" type = "text/css" >
-    <link href = "../css/jquery-confirm.min.css" rel = "stylesheet" type = "text/css" >
-    <link href = "../css/sweetalert2.css" rel = "stylesheet" >
   </head>
   <body>
-  <div class = "preloader"></div>
+    <div class = "preloader"></div>
 	   <section class = "top_header_area">
 	      <div class = "container">
           <ul class = "nav navbar-nav top_nav">
@@ -60,31 +46,28 @@
               </div>
             </div>
             <div class = "col-md-10 p0">
-                       <div class = "collapse navbar-collapse" id = "min_navbar">
-                           <ul class = "nav navbar-nav navbar-right">
-                             <?php
-                              require_once 'autre/menu_commerciaux.php';
-                             ?>
-                           </ul>
-                       </div>
-                   </div>
+                <div class = "collapse navbar-collapse" id = "min_navbar">
+                    <ul class = "nav navbar-nav navbar-right">
+                    <?php
+                        require_once 'autre/menu_admin.php';
+                     ?>
+                    </ul>
+                </div>
+            </div>
           </div>
         </nav>
         <section class = "banner_area" data-stellar-background-ratio = "0.5">
-          <h2>Liste des clients</h2>
+          <h2>Page non trouvé</h2>
           <ol class = "breadcrumb">
-            <li><a href = "consult_client.php" class = "active">Liste des clients</a></li>
+            <li><a href = "page_not_found_admin.php" class = "active">Page non trouvé</a></li>
           </ol>
         </section>
-        <section class = "blog_tow_area">
-          <div class = "container">
-            <span class = "tittle tittle_ges">
-              <h2>Liste des clients</h2>
-            </span>
-            <div id = "result2"></div>
-           </div>
-          </section>
-          <footer class = "footer_area">
+        <section class = "not_found_area">
+          <h2>Page non trouvé</h2>
+          <p>Cette page est temporairement indisponible. Ressayer plus tard..</p>
+          <h1>404</h1>
+        </section>
+        <footer class = "footer_area">
             <div class = "container">
               <div class = "footer_row row">
                 <div class = "col-md-3 col-sm-6 footer_about">
@@ -137,32 +120,5 @@
           <script src = "../vendors/owl_carousel/owl.carousel.min.js"></script>
           <script src = "../vendors/stellar/jquery.stellar.js"></script>
           <script src = "../js/theme.js"></script>
-          <script src = "../js/fonction.js"></script>
-          <script src = "../js/jquery-confirm.min.js"></script>
-          <script src = "../js/sweetalert2.all.min.js"></script>
-          <script>
-             $(document).ready(function(){
-              load_data();
-              function load_data(query){
-                $.ajax({
-                  url:"autre/fetch_consult_client.php",
-                  method:"POST",
-                  data:{query:query},
-                  success:function(data){
-                    $('#result2').html(data);
-                  }
-                });
-              }
-              $('#search_text').keyup(function(){
-                var search = $(this).val();
-                if(search != ''){
-                  load_data(search);
-                }
-                else{
-                  load_data();
-                }
-              });
-            });
-          </script>
         </body>
-      </html>
+    </html>
